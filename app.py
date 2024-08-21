@@ -13,10 +13,10 @@ def load_model():
 
 model = load_model()
 
-st.title('Shakesperean Text Generator')
+st.title('Shakespearean Text Generator')
 
 input_text = st.text_area('Enter some starting text:', 'In times long past')
-max_new_tokens = st.slider('Number of tokens to generate:', 1, 1000, 100)
+max_new_tokens = st.slider('Number of tokens to generate:', 1, 10000, 100)
 
 if st.button('Generate Text'):
     context = torch.tensor(encode(input_text), dtype=torch.long, device=device).unsqueeze(0)
@@ -31,5 +31,6 @@ if st.button('Generate Text'):
 
 st.sidebar.header('Model Information')
 st.sidebar.write(f'Vocabulary Size: {model.token_embedding_table.num_embeddings}')
+st.sidebar.write(f'Number of parameters: {sum(p.numel() for p in model.parameters())/1e6}M parameters')
 st.sidebar.write(f'Embedding Dimension: {model.token_embedding_table.embedding_dim}')
 st.sidebar.write(f'Number of Layers: {len(model.blocks)}')
