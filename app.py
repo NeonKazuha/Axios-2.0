@@ -30,7 +30,6 @@ if st.button('Generate Text'):
     st.write(generated_text)
 
 st.sidebar.header('Model Information')
-st.sidebar.write(f'Vocabulary Size: {model.token_embedding_table.num_embeddings}')
-st.sidebar.write(f'Number of parameters: {sum(p.numel() for p in model.parameters())/1e6}M parameters')
+st.sidebar.write(f'Number of parameters: {sum(p.numel() for p in model.parameters())}')
 st.sidebar.write(f'Embedding Dimension: {model.token_embedding_table.embedding_dim}')
 st.sidebar.write(f'Number of Layers: {len(model.blocks)}')
