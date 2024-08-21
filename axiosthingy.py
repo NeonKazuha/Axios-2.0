@@ -21,6 +21,7 @@ n_embd = 384
 n_head = 6
 n_layer = 6
 dropout = 0.2
+vocab_size = 65
 
 stoi = {'\n': 0,
  ' ': 1,
