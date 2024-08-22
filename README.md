@@ -1,97 +1,73 @@
-# Axios
+# Axios 2.0
 
-Axios is a PyTorch-based transformer model trained from scratch on a dataset containing subtitles from some Marvel Cinematic Universe (MCU) movies. The primary purpose of this project is to generate text in the style of MCU dialogues.
+Welcome to **Axios 2.0**! This repository hosts a transformer-based language model trained from scratch using PyTorch. The model is built on a dataset containing all of Shakespeare's works, designed to generate coherent and stylistically rich text.
 
-## Live Demo
+## Table of Contents
 
-Experience the Avengers Story Generator live at: [https://axiosav.streamlit.app/](https://axiosav.streamlit.app/)
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Model Architecture](#model-architecture)
+- [Dataset](#dataset)
+- [Results](#results)
+- [Future Work](#future-work)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+
+## Project Overview
+
+**Axios 2.0** is an upgraded version of the original Axios project. The goal is to create a robust generative model that captures the intricate language and stylistic elements present in Shakespeare's works. This repository not only includes the model training and evaluation scripts but also a user-friendly frontend built with Streamlit.
 
 ## Features
 
-- **Transformer Model**: Trained from scratch using PyTorch.
-- **Text Generation**: Generates text based on input sequences, mimicking MCU-style dialogues.
-- **Streamlit Frontend**: A user-friendly web interface to interact with the model and generate text.
-- **MIT License**: This project is open-source and available under the MIT license.
+- **Transformer Architecture**: Built with PyTorch, focusing on generating high-quality text.
+- **Shakespeare Dataset**: Trained on a dataset containing all of Shakespeare's works, ensuring the model produces text that is rich in classical language and poetic structure.
+- **Streamlit Frontend**: Provides a seamless interface for users to interact with the model.
+- **Modular Design**: Easy to extend and modify, with clear separation of concerns in the codebase.
+- **MIT License**: Open-source and free to use.
 
-## Getting Started
+## Installation
 
-You can use the application directly through the [live demo](https://axiosav.streamlit.app/) or set it up locally by following the instructions below.
+1. Clone the repository:
 
-### Prerequisites
+   ```bash
+   git clone https://github.com/NeonKazuha/Axios-2.0.git
+   cd Axios-2.0
 
-- Python 3.7 or higher
-- pip package manager
+2. Install the required dependencies:
 
-### Local Installation
-
-1. **Clone the Repository**:
-    ```bash
-    git clone https://github.com/yourusername/axios.git
-    cd axios
-    ```
-
-2. **Install Dependencies**:
-    Use the provided `requirements.txt` file to install the necessary Python packages:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. **Download the Pre-trained Model**:
-    - Ensure you have the `avengers.pth` model file in the project directory. If not, download it from [this link](#) and place it in the root directory of the project.
-
-4. **Run the Streamlit App**:
-    ```bash
-    streamlit run app.py
-    ```
-
-    The application will open in your default web browser at `http://localhost:8501/`.
+   pip install -r requirements.txt
 
 ## Usage
 
-### Online Usage
+To generate text using the trained model:
 
-1. Visit the [Avengers Story Generator](https://axiosav.streamlit.app/).
-2. Enter some starting text in the text area provided.
-3. Adjust the number of tokens you want to generate using the slider.
-4. Click the "Generate Text" button to see the generated dialogue.
+1. Launch the Streamlit frontend:
 
-### Local Usage
+   ```bash
+   streamlit run app.py
 
-1. Follow the **Local Installation** steps above.
-2. Open your browser and go to `http://localhost:8501/`.
-3. Enter your desired starting text and specify the number of tokens to generate.
-4. Click "Generate Text" to see the output.
+2. Access the application in your web browser and start generating text inspired by Shakespearean language.
 
-## Project Structure
+## Dataset
 
-axios/
-├── axiosthingy.py # Contains the model and preprocessing classes
-├── app.py # Streamlit application
-├── Shakespeare_model.pth # Pre-trained model weights
-├── requirements.txt # Python dependencies
-├── README.md # Project documentation
-└── LICENSE # MIT License
+The dataset used for training consists of all of Shakespeare's works. The dataset is preprocessed to fit the input requirements of the transformer model, ensuring that the generated text retains the stylistic elements characteristic of Shakespeare.
 
+## Results
 
-## Built With
+The model generates text that is thematically consistent with Shakespeare's writing. While not perfect, the results are promising and demonstrate the model's ability to produce text that is rich in classical language and poetic structure.
 
-- [PyTorch](https://pytorch.org/): For training and implementing the transformer model.
-- [Streamlit](https://streamlit.io/): For building the interactive web interface.
-- [Kaggle](https://www.kaggle.com/): Sourced the dataset of MCU subtitles.
+## Future Work
+
+- **Further Fine-Tuning**: Experimenting with additional datasets and fine-tuning techniques to improve output quality.
+- **Incorporating Attention Mechanisms**: Investigating the use of different attention mechanisms for better performance.
+- **Expanding the Dataset**: Including other classical literary works to diversify the training data.
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## Contributing
-
-Contributions to this project are not accepted at this time.
-
 ## Acknowledgments
 
-- Inspired by the amazing work of the Marvel Cinematic Universe.
-- Thanks to Kaggle for providing access to valuable datasets.
-
----
-
-*Note: This project was developed for educational purposes and may not cover all aspects of a production-ready application.*
+Special thanks to the open-source community and contributors who made this project possible.
